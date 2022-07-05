@@ -1,6 +1,7 @@
  body{
     font-style: italic;
-    font-family: 'Bigelow Rules', cursive;
+    font-family: 'Bigelow Rules';
+    padding: 20px 60px;
     
 
  }
