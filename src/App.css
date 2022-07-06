@@ -1,7 +1,15 @@
  body{
     font-style: italic;
     font-family: 'Bigelow Rules';
-    padding: 20px 60px;
+    padding: 10px 20px;
+    
     
 
  }
+ a{
+      text-decoration: none;
+      color: black;
+    }
+   a:hover{
+      color: blue;
+   }
