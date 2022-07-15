@@ -1,15 +1,15 @@
-import firebase from 'firebase/compat/app'
-   
-import 'firebase/compat/firestore'
-import 'firebase/compat/auth'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import 'firebase/compat/auth';
+
 const config = {
-  apiKey: "AIzaSyDXWfVdQnyWQGwDAtixzJ-SO0gp06-P2N4",
-  authDomain: "habesha-db.firebaseapp.com",
-  projectId: "habesha-db",
-  storageBucket: "habesha-db.appspot.com",
-  messagingSenderId: "762523981995",
-  appId: "1:762523981995:web:52e5d0f393fd21b366ffee",
-  measurementId: "G-EN1DZL6SZ8"
+  apiKey: 'AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14',
+  authDomain: 'crwn-db.firebaseapp.com',
+  databaseURL: 'https://crwn-db.firebaseio.com',
+  projectId: 'crwn-db',
+  storageBucket: 'crwn-db.appspot.com',
+  messagingSenderId: '850995411664',
+  appId: '1:850995411664:web:7ddc01d597846f65'
 };
 
 firebase.initializeApp(config);
