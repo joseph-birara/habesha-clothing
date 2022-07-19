@@ -5,12 +5,16 @@ import CustomButton from '../custom-button/custom-button.component';
 import './cart-dropdown.styles.scss';
 import CartItem from '../cart-item/cart-item.component';
 import { connect } from 'react-redux';
-const CartDropdown = ({cartItems}) => (
+import { withRouter } from 'react-router-dom';
+const CartDropdown = ({cartItems, history}) => (
   <div className='cart-dropdown'>
     <div className='cart-items' >
-      {cartItems.map(cartItem =><CartItem key={cartItem.id} item ={cartItem} />)}
+      {cartItems.length?(
+        cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />))
+        :(<span className='empty-message' >You don't have an item</span>)
+      }
       </div>
-    <CustomButton>GO TO CHECKOUT</CustomButton>
+    <CustomButton onClick = {()=>history.push('/checkout')}>GO TO CHECKOUT</CustomButton>
   </div>
 );
 
@@ -18,4 +22,4 @@ const mapStateToProps = ({
   cart:{cartItems}
 }) =>({cartItems})
 
-export default connect(mapStateToProps)(CartDropdown);
+export default withRouter( connect(mapStateToProps)(CartDropdown));
